@@ -1,0 +1,76 @@
+{
+  "project_info": {
+    "project_number": "465355913295",
+    "project_id": "sgpharma-53cb0",
+    "storage_bucket": "sgpharma-53cb0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:465355913295:android:3b25a6121062830a5b523a",
+        "android_client_info": {
+          "package_name": "com.example.sgpharma"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "465355913295-ds75qckfgmhmup390mphkofn39e9j37a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sgpharma",
+            "certificate_hash": "54e45a6e80d45ca88cf55e0ef04a3bd6c7f059a8"
+          }
+        },
+        {
+          "client_id": "465355913295-28kgad4n7nkehphcb2ogkm9lph4198sp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDG2AO8QsNjIIWM60GgOEJY1_2BzVtamuI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "465355913295-28kgad4n7nkehphcb2ogkm9lph4198sp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:465355913295:android:22fe038c346f97d15b523a",
+        "android_client_info": {
+          "package_name": "com.pallife.medigos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "465355913295-28kgad4n7nkehphcb2ogkm9lph4198sp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDG2AO8QsNjIIWM60GgOEJY1_2BzVtamuI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "465355913295-28kgad4n7nkehphcb2ogkm9lph4198sp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

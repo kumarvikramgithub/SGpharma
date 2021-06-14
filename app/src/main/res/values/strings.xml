@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">SGPharma</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="item_name">Item Name</string>
+    <string name="ptr_less">Ptr Less</string>
+    <string name="less_rate">Less</string>
+    <string name="down_rate">Down</string>
+    <string name="net_rate">Net</string>
+    <string name="expairy_date">Expairy</string>
+    <string name="mrp">M. R. P.</string>
+    <string name="company_item">Company</string>
+    <string name="rate_of_item">Rate Of Item</string>
+    <string name="add_item">+add Item</string>
+
+</resources>
