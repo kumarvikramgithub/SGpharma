@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical">
 
 
@@ -27,8 +28,10 @@
 <!--            <androidx.recyclerview.widget.RecyclerView-->
 <!--                android:id="@+id/itemPicRecyclerView"-->
 <!--                android:layout_width="match_parent"-->
+<!--                android:orientation="horizontal"-->
 <!--                android:layout_height="150dp"-->
-<!--                android:padding="10dp">-->
+<!--                tools:listitem="@layout/item_pic_sample"-->
+<!--                android:padding="10dp"/>-->
 
 <!--            </androidx.recyclerview.widget.RecyclerView>-->
             <ImageView

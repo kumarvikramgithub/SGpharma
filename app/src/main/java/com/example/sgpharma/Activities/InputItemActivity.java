@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.example.sgpharma.Models.ItemModels;
+import com.example.sgpharma.Models.ItemPicModel;
 import com.example.sgpharma.Models.Users;
 import com.example.sgpharma.databinding.ActivityInputItemBinding;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -27,6 +28,7 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
 import java.text.DateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 
 public class InputItemActivity extends AppCompatActivity {
@@ -130,11 +132,12 @@ public class InputItemActivity extends AppCompatActivity {
                             }
                         });
                         Calendar calendar =Calendar.getInstance();
-                       String currentDate= DateFormat.getDateInstance().format(calendar.getTime());
+                        String currentDate= DateFormat.getDateInstance().format(calendar.getTime());
                         String dateOfUpdation = "Last Update: "+currentDate+", ";
 
                         String updateBy = "Vikram";
                         item.setUpdatedBy(updateBy);
+                        item.setItemId(itemId);
                         item.setUpdatedDate(dateOfUpdation);
                         database.getReference().child("Items").child(itemId).setValue(item);
                         dialog.dismiss();

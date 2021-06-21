@@ -1,13 +1,15 @@
 package com.example.sgpharma.Models;
 
+import java.util.ArrayList;
+
 public class ItemPicModel {
     String itemPic;
 
-    public ItemPicModel(String itemPic) {
-        this.itemPic = itemPic;
+    public ItemPicModel() {
     }
 
-    public ItemPicModel() {
+    public ItemPicModel(String itemPic) {
+        this.itemPic = itemPic;
     }
 
     public String getItemPic() {
@@ -17,4 +19,5 @@ public class ItemPicModel {
     public void setItemPic(String itemPic) {
         this.itemPic = itemPic;
     }
+
 }

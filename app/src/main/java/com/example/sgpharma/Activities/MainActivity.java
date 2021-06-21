@@ -21,7 +21,9 @@ import android.widget.Toast;
 import com.example.sgpharma.Adapters.ItemAdapters;
 import com.example.sgpharma.Fragments.AccountFragment;
 import com.example.sgpharma.Fragments.OtpFragment;
+import com.example.sgpharma.Models.ItemMainModel;
 import com.example.sgpharma.Models.ItemModels;
+import com.example.sgpharma.Models.ItemPicModel;
 import com.example.sgpharma.Models.Users;
 import com.example.sgpharma.R;
 import com.example.sgpharma.databinding.ActivityMainBinding;
@@ -79,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
                 list.clear();
                 for (DataSnapshot dataSnapshot:snapshot.getChildren()){
                     ItemModels item =dataSnapshot.getValue(ItemModels.class);
-                        list.add(item);
+                    list.add(item);
 
                 }
                 //binding.itemRecyclerView.hideShimmerAdapter();

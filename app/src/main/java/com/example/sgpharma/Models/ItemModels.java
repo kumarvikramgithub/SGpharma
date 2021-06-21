@@ -1,14 +1,15 @@
 package com.example.sgpharma.Models;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class ItemModels {
-    String itemMrp,itemRate,itemExpairyDate,itemCompany,itemRateInDown,itemRateInLess,itemRateInPtr,itemName,updatedBy,updatedDate,itemPic;
+    String itemId,itemMrp,itemRate,itemExpairyDate,itemCompany,itemRateInDown,itemRateInLess,itemRateInPtr,itemName,updatedBy,updatedDate,itemPic;
     //ArrayList<ItemPicModel> itemPic;
 
-    public ItemModels(String itemMrp, String itemRate, String itemExpairyDate, String itemCompany, String itemRateInDown, String itemRateInLess, String itemRateInPtr,
-                      String itemName, String updatedBy, String updatedDate, String itemPic) {
+
+    public ItemModels(String itemId, String itemMrp, String itemRate, String itemExpairyDate, String itemCompany, String itemRateInDown,
+                      String itemRateInLess, String itemRateInPtr, String itemName, String updatedBy, String updatedDate, String itemPic) {
+        this.itemId = itemId;
         this.itemMrp = itemMrp;
         this.itemRate = itemRate;
         this.itemExpairyDate = itemExpairyDate;
@@ -23,6 +24,14 @@ public class ItemModels {
     }
 
     public ItemModels() {
+    }
+
+    public String getItemId() {
+        return itemId;
+    }
+
+    public void setItemId(String itemId) {
+        this.itemId = itemId;
     }
 
     public String getItemMrp() {
