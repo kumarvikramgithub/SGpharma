@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import com.example.sgpharma.Classes.Helper;
 import com.example.sgpharma.Models.ItemModels;
 import com.example.sgpharma.Models.ItemPicModel;
 import com.example.sgpharma.Models.Users;
@@ -81,29 +82,10 @@ public class InputItemActivity extends AppCompatActivity {
         String itemExpairy =binding.expairy.getText().toString();
         String itemCompany =binding.company.getText().toString();
         String itemNetRate =binding.netRate.getText().toString();
-        Float mrpFloat=Float.parseFloat(itemMrp);
-        Float netRateFloat =Float.parseFloat(itemNetRate);
-
-//                Down rate Calculation
-
-        Float mrpFloat23less =mrpFloat -mrpFloat*23/100;
-        Float lessToNetRate =mrpFloat23less-netRateFloat;
-        Float downRate=lessToNetRate*100/mrpFloat23less;
-
-//                Less Rate from Mrp calculation
-        lessToNetRate=mrpFloat-netRateFloat;
-        Float lessRate = lessToNetRate*100/mrpFloat;
-
-//                Ptr Less Calculation
-        Float tradeLessAmount=mrpFloat -mrpFloat*28.57f/100;
-        Float tradeLessAmountplusless=netRateFloat*100/112;
-        tradeLessAmountplusless=tradeLessAmount-tradeLessAmountplusless;
-        tradeLessAmountplusless*=100;
-        tradeLessAmountplusless/=tradeLessAmount;
-
-        String itemDownRate=String.valueOf(downRate);
-        String itemLessRate=String.valueOf(lessRate);
-        String itemPtrLessRate=String.valueOf(tradeLessAmountplusless);
+        Helper helper=new Helper();
+        String itemDownRate=helper.calculationDownRate(itemMrp,itemNetRate);
+        String itemLessRate=helper.calculationLessRate(itemMrp,itemNetRate);
+        String itemPtrLessRate=helper.calculationPtrLessRate(itemMrp,itemNetRate);
         ItemModels item= new ItemModels();
         item.setItemName(itemName);
         item.setItemMrp(itemMrp);

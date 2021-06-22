@@ -39,8 +39,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:layout_margin="10dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/ic_user" />
+                android:src="@drawable/ic_user"
+                android:elevation="12dp"
+                android:padding="5dp"
+                android:backgroundTint="@color/black"/>
 
             <TextView
                 android:id="@+id/itemName"

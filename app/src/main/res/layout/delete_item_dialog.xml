@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_warning"
+        android:contentDescription="@string/todo" />
+
+    <TextView
+        android:id="@+id/deleteTextMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textColor="#CC3636"
+        android:textColorHint="@color/design_default_color_error"
+        android:textSize="24sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/noDeleteItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:text="@string/no"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:backgroundTint="#436844"
+            app:cornerRadius="5dp"
+            app:elevation="10dp" />
+
+        <Button
+            android:id="@+id/yesDeleteItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:text="@string/yes"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:backgroundTint="#EC2424"
+            app:cornerRadius="5dp"
+            app:elevation="10dp" />
+    </LinearLayout>
+
+</LinearLayout>

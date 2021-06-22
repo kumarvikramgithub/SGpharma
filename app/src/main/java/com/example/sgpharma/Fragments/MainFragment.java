@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.sgpharma.Activities.LedgerActivity;
 import com.example.sgpharma.Activities.LoginActivity;
 import com.example.sgpharma.Activities.MainActivity;
 import com.example.sgpharma.R;
@@ -46,6 +47,12 @@ public class MainFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getContext(),MainActivity.class));
+            }
+        });
+        binding.ledgers.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), LedgerActivity.class));
             }
         });
         return binding.getRoot();

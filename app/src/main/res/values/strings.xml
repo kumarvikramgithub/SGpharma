@@ -12,5 +12,18 @@
     <string name="company_item">Company</string>
     <string name="rate_of_item">Rate Of Item</string>
     <string name="add_item">+add Item</string>
+    <string name="todo">TODO</string>
+    <string name="are_you_sure_want_to_delete_this_item">Are you sure want to delete This Item.</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="ledger_name">Ledger Name</string>
+    <string name="ledger_opening_balance">Ledger Opening Balance</string>
+    <string name="ledger_mobile">Ledger Mobile</string>
+    <string name="ledger_pic">ledger pic</string>
+    <string name="add_ledger">Add Ledger</string>
+    <string name="rs">Rs. :</string>
+    <string name="delete">Delete</string>
+    <string name="update">Update</string>
+    <string name="new_ledger">New Ledger</string>
 
 </resources>

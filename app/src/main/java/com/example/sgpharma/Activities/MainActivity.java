@@ -3,6 +3,7 @@ package com.example.sgpharma.Activities;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -12,6 +13,8 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -48,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
     FirebaseDatabase database;
     FirebaseAuth auth;
     FirebaseStorage storage;
+    ItemAdapters itemAdapter; //=new ItemAdapters(MainActivity.this,list);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,40 +64,59 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this,InputItemActivity.class));
             }
         });
-        addItemInRecyclerView();
-    }
 
+            //binding.itemRecyclerView.showShimmerAdapter();
+            database =FirebaseDatabase.getInstance();
+            auth=FirebaseAuth.getInstance();
+            storage=FirebaseStorage.getInstance();
+            database.getReference().child("Items").addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
 
+                    list.clear();
+                    for (DataSnapshot dataSnapshot:snapshot.getChildren()){
+                        ItemModels item =dataSnapshot.getValue(ItemModels.class);
+                        list.add(item);
 
-    private void addItemInRecyclerView() {
-        ItemAdapters itemAdapter =new ItemAdapters(MainActivity.this,list);
+                    }
+                    //binding.itemRecyclerView.hideShimmerAdapter();
+                    itemAdapter.notifyDataSetChanged();
+
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+            });
+        itemAdapter =new ItemAdapters(MainActivity.this,list);
+
         binding.itemRecyclerView.setAdapter(itemAdapter);
         LinearLayoutManager layoutManager = new LinearLayoutManager(MainActivity.this);
         binding.itemRecyclerView.setLayoutManager(layoutManager);
-        //binding.itemRecyclerView.showShimmerAdapter();
-        database =FirebaseDatabase.getInstance();
-        auth=FirebaseAuth.getInstance();
-        storage=FirebaseStorage.getInstance();
-        database.getReference().child("Items").addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-
-                list.clear();
-                for (DataSnapshot dataSnapshot:snapshot.getChildren()){
-                    ItemModels item =dataSnapshot.getValue(ItemModels.class);
-                    list.add(item);
-
-                }
-                //binding.itemRecyclerView.hideShimmerAdapter();
-                itemAdapter.notifyDataSetChanged();
-
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
     }
 
+
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.search_menu,menu);
+        MenuItem item=menu.findItem(R.id.action_search);
+        SearchView searchView=(SearchView)item.getActionView();
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                itemAdapter.getFilter().filter(newText);
+
+                return false;
+            }
+        });
+        return super.onCreateOptionsMenu(menu);
+    }
 }

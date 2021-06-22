@@ -1,7 +1,5 @@
 package com.example.sgpharma.Models;
 
-import java.util.ArrayList;
-
 public class ItemModels {
     String itemId,itemMrp,itemRate,itemExpairyDate,itemCompany,itemRateInDown,itemRateInLess,itemRateInPtr,itemName,updatedBy,updatedDate,itemPic;
     //ArrayList<ItemPicModel> itemPic;
