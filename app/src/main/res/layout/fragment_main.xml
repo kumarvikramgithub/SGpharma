@@ -12,7 +12,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="12dp"
-            app:cardBackgroundColor="#68747A"
+            app:cardBackgroundColor="#F0F8FF"
             app:cardCornerRadius="5dp"
             app:cardElevation="15dp">
 
@@ -68,6 +68,71 @@
                                     android:textSize="18sp"
                                     android:textStyle="bold"
                                     app:backgroundTint="#AFBAB9"
+                                    app:elevation="10dp" />
+                        </LinearLayout>
+                </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            app:cardBackgroundColor="#F0F8FF"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                                <Button
+                                    android:id="@+id/sale"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="15dp"
+                                    android:layout_weight="1"
+                                    android:text="Sale"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold"
+                                    app:backgroundTint="#76AE79"
+                                    app:elevation="10dp" />
+
+                                <Button
+                                    android:id="@+id/purchase"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="15dp"
+                                    android:layout_weight="1"
+                                    android:text="purchase"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold"
+                                    app:backgroundTint="#4EDACA"
+                                    app:elevation="10dp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+
+                                <Button
+                                    android:id="@+id/stock"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="15dp"
+                                    android:layout_weight="1"
+                                    android:text="stock"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold"
+                                    app:backgroundTint="#71C7ED"
                                     app:elevation="10dp" />
                         </LinearLayout>
                 </LinearLayout>
